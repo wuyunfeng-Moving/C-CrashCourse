@@ -18,15 +18,15 @@ int main(void) {
 	printf("\nYears");
 	for (int i = 0; i < NUM_RATES; i++) {
 		printf("%7d%%", rate + i);
-		value[i] = INITIAL_BALANCE; // ³õÊ¼»¯
+		value[i] = INITIAL_BALANCE; // åˆå§‹åŒ–
 	}
 	printf("\n");
 
 	for (int i = 0; i < year; i++) {
-		printf("%3d   ", i); // ²¹¿Õ¸ñ£¬ÈÃµÚÒ»ÐÐºÍÏÂÃæµÄÐÐ¶ÔÆë
+		printf("%3d   ", i); // è¡¥ç©ºæ ¼ï¼Œè®©ç¬¬ä¸€è¡Œå’Œä¸‹é¢çš„è¡Œå¯¹é½
 		for (int j = 0; j < NUM_RATES; j++) {
-			value[j] += value[j] * (rate + j) / 100; // ×¢ÒâÕâÀï²»ÒªÐ´´í
-			printf("%8.2f", value[j]);
+			value[j] += value[j] * (rate + j) / 100; // æ³¨æ„è¿™é‡Œä¸è¦å†™é”™
+			printf("%8.4f", value[j]);
 		}
 		printf("\n");
 	}
